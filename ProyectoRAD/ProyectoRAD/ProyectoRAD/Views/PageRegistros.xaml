@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoRAD.Views.PageRegistros">
+    <ScrollView>
+
+        <StackLayout BackgroundColor="#54ADF6"
+                     VerticalOptions="FillAndExpand">
+
+            <Label Text="Ingrese los datos"
+               FontSize="23.5"
+               FontAttributes="Bold"
+               TextColor="#442708"
+               Margin="20"
+               HorizontalOptions="CenterAndExpand"/>
+
+            <Image Source="logo.png"
+               WidthRequest="250" HeightRequest="100"
+               HorizontalOptions="Center"
+               Margin="-10"/>
+
+            <Entry x:Name="TxtCodigo" Keyboard="Text"
+                   FontSize="10"
+                   TextColor="Black"
+                   PlaceholderColor="#FFDDBA"
+                   WidthRequest="50" HeightRequest="20"/>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350"/>
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="Foto" BackgroundColor="Azure"
+                       Grid.Row="0" Grid.Column="0"
+                       WidthRequest="150"
+                       HeightRequest="150"/>
+
+                <Button x:Name="BtnTomarFoto" Text="Tomar foto" Clicked="BtnTomarFoto_Clicked"
+                            FontAttributes="Bold"
+                            TextTransform="None"
+                            BackgroundColor="#08589A"
+                            CornerRadius="15"
+                            Margin="20,0,20,-10"
+                            Grid.Row="0" Grid.Column="1"
+                            VerticalOptions="CenterAndExpand"/>
+            </Grid>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="usuario.png"
+               WidthRequest="250" HeightRequest="100"
+               HorizontalOptions="Center"
+               Margin="10"/>
+
+                <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10"
+                   Grid.Row="0" Grid.Column="1"
+                               VerticalOptions="CenterAndExpand">
+
+                    <Entry x:Name="TxtNombres" Placeholder="Ingrese su nombre" Keyboard="Text"
+                   FontSize="15"
+                   TextColor="Black"
+                   PlaceholderColor="#CBC2B4"
+                   WidthRequest="50" HeightRequest="34.6"/>
+                </Frame>
+            </Grid>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10"
+                   Grid.Row="0" Grid.Column="1"
+                               VerticalOptions="CenterAndExpand">
+
+                    <Entry x:Name="TxtApellidos" Placeholder="Ingrese su apellido" Keyboard="Text"
+                   FontSize="15"
+                   TextColor="Black"
+                   PlaceholderColor="#CBC2B4"
+                   WidthRequest="50" HeightRequest="34.6"/>
+                </Frame>
+            </Grid>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="calendario.png"
+               WidthRequest="250" HeightRequest="100"
+               HorizontalOptions="Center"
+               Margin="10"/>
+
+                <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10"
+                   Grid.Row="0" Grid.Column="1"
+                               VerticalOptions="CenterAndExpand">
+
+                    <Entry x:Name="TxtFechaNac" Placeholder="Ingrese su nombre" Keyboard="Text"
+                   FontSize="15"
+                   TextColor="Black"
+                   PlaceholderColor="#CBC2B4"
+                   WidthRequest="50" HeightRequest="34.6"/>
+                </Frame>
+            </Grid>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="ubicacion.png"
+               WidthRequest="250" HeightRequest="100"
+               HorizontalOptions="Center"
+               Margin="10"/>
+
+                <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10"
+                   Grid.Row="0" Grid.Column="1"
+                               VerticalOptions="CenterAndExpand">
+
+                    <Picker x:Name="pickerCountry" Title="Seleccione un pais" 
+                    TextColor="#6E4417"
+                    WidthRequest="50" HeightRequest="37">
+                        <Picker.Items>
+                            <x:String>
+                                Honduras (504)
+                            </x:String>
+                            <x:String>
+                                Costa Rica
+                            </x:String>
+                            <x:String>
+                                Guatemala (502)
+                            </x:String>
+                            <x:String>
+                                El Salvador
+                            </x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                </Frame>
+            </Grid>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10"
+                   Grid.Row="0" Grid.Column="1"
+                               VerticalOptions="CenterAndExpand">
+
+                    <Entry x:Name="TxtDepto" Placeholder="Ingrese el departamento" Keyboard="Text"
+                   FontSize="15"
+                   TextColor="Black"
+                   PlaceholderColor="#CBC2B4"
+                   WidthRequest="50" HeightRequest="34.6"/>
+                </Frame>
+            </Grid>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10"
+                   Grid.Row="0" Grid.Column="1"
+                               VerticalOptions="CenterAndExpand">
+
+                    <Entry x:Name="TxtMunicipio" Placeholder="Ingrese el municipio" Keyboard="Text"
+                   FontSize="15"
+                   TextColor="Black"
+                   PlaceholderColor="#CBC2B4"
+                   WidthRequest="50" HeightRequest="34.6"/>
+                </Frame>
+            </Grid>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="Civil.png"
+               WidthRequest="250" HeightRequest="100"
+               HorizontalOptions="Center"
+               Margin="10"/>
+
+                <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10"
+                   Grid.Row="0" Grid.Column="1"
+                               VerticalOptions="CenterAndExpand">
+
+                    <Picker x:Name="pickerCivil" Title="Seleccione su estado civil" 
+                    TextColor="#6E4417"
+                    WidthRequest="50" HeightRequest="37">
+                        <Picker.Items>
+                            <x:String>
+                                Soltero/a
+                            </x:String>
+                            <x:String>
+                                Casado/a
+                            </x:String>
+                            <x:String>
+                                Divorciado/a
+                            </x:String>
+                            <x:String>
+                                Viudo/a
+                            </x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                </Frame>
+            </Grid>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="Telefono.png"
+               WidthRequest="250" HeightRequest="100"
+               HorizontalOptions="Center"
+               Margin="10"/>
+
+                <Frame HasShadow="{OnPlatform Android=true}"
+               Padding="{OnPlatform Android=4}"
+               CornerRadius="15"
+               Margin="20,0,20,-10"
+                   Grid.Row="0" Grid.Column="1"
+                               VerticalOptions="CenterAndExpand">
+
+                    <Entry x:Name="TxtTelefono" Placeholder="Ingrese su número" Keyboard="Numeric"
+                   FontSize="15"
+                   TextColor="Black"
+                   PlaceholderColor="#CBC2B4"
+                   WidthRequest="50" HeightRequest="34.6"/>
+                </Frame>
+            </Grid>
+
+            <Button x:Name="BtnAgregarDatos" Text="Guardar registro" Clicked="BtnAgregarDatos_Clicked"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextTransform="None"
+                BackgroundColor="#08589A"
+                BorderColor="#793F03"
+                CornerRadius="15"
+                Margin="20,50,20,80"
+                VerticalOptions="CenterAndExpand"/>
+
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
